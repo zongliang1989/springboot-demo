@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.demo.dao.AreaDao">
+    <select id="getAreas" resultType="java.util.Map">
+        select * from areainfo
+    </select>
+    <select id="getAreasList" resultType="com.test.demo.entity.AreaInfo">
+        SELECT
+            area_id AS areaId,
+            area_name AS areaName,
+            priority AS priority,
+            create_time AS createTime,
+            last_edit_time AS lastEditTime
+        FROM
+            areainfo
+    </select>
+</mapper>
